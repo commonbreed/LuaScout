@@ -15,4 +15,7 @@ This project was started to address a personal need to identify and interact wit
 | Local var   | **camelCase**, no whitespace, no hyphenation        |
 
 ### Dependencies
-The only dependency of LuaScout is [PLTHook](https://github.com/kubo/plthook), a library for modifying the Procedure Linkage Table of ELF-format executables and libraries across many operating systems and microarchitectures. 
+The only dependency of LuaScout is [PLTHook](https://github.com/kubo/plthook), a library for modifying the Procedure Linkage Table of ELF-format executables and libraries across many operating systems and microarchitectures.
+
+### IMPORTANT NOTICE
+As is inferred from the dependency on PLTHook, this library can only hook to Lua functions located within the PLT. If functions have been inlined (for example), this library will serve no purpose.
